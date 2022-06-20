@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\registroController;
+use App\Http\Controllers\DIAController;
+use App\Http\Controllers\DIGITOController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/registro', registroController::class);
+
+Route::resource('/DIGITO', digitoController::class);
